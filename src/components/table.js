@@ -1,6 +1,8 @@
 import React from 'react';
-import Employee from "./employee"
-import Headers from "./table-headers"
+import Employee from "./employee";
+import Headers from "./table-headers";
+import _ from "lodash";
+
 
 export default function () {
     return (
@@ -10,7 +12,7 @@ export default function () {
                     <tr><Headers /></tr>
                 </thead>
                 <tbody>
-                    <tr><Employee /></tr>
+                    <Employee />
                 </tbody>
             </table>
         </>

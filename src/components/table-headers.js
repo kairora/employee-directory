@@ -10,7 +10,6 @@ export default class TableHeaders extends Component {
             return <th scope="col" className="text-center">{header}</th>
         });
     }
-
     render () {
         return ( 
             <>
