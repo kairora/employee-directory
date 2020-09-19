@@ -10,7 +10,7 @@ export default function () {
                     <tr><Headers /></tr>
                 </thead>
                 <tbody>
-                    <Employee />
+                    <tr><Employee /></tr>
                 </tbody>
             </table>
         </>

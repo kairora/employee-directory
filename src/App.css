@@ -33,6 +33,10 @@
   visibility: hidden;
 }
 
+tbody td {
+  text-align: center;
+}
+
 
 @keyframes logo {
   from {
