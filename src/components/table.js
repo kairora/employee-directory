@@ -1,22 +1,16 @@
 import React from 'react';
 import Employee from "./employee"
+import Headers from "./table-headers"
 
 export default function () {
     return (
         <>
             <table className="table table-striped table-dark">
                 <thead>
-                    <tr>
-                        <th scope="col">Image</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">DOB</th>
-                    </tr>
+                    <tr><Headers /></tr>
                 </thead>
                 <tbody>
                     <Employee />
-
                 </tbody>
             </table>
         </>
