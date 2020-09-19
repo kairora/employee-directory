@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Employee Directory</h1>
+        <h1><i class="fas fa-id-card"></i> Employee Directory</h1>
         <p>Click on carrots to filter by heading or use the search box to narrow your results.</p>
       </header>
     </div>
