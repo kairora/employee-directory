@@ -3,7 +3,7 @@ import Employee from "./employee";
 import Headers from "./table-headers";
 
 
-export default function () {
+export default function (props) {
     return (
         <>
             <table className="table table-striped table-dark">
@@ -11,7 +11,7 @@ export default function () {
                     <tr><Headers /></tr>
                 </thead>
                 <tbody>
-                    <Employee />
+                    <Employee currentSearchValue= {props.currentSearchValue} />
                 </tbody>
             </table>
         </>
