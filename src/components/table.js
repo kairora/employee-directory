@@ -1,7 +1,6 @@
 import React from 'react';
 import Employee from "./employee";
 import Headers from "./table-headers";
-import _ from "lodash";
 
 
 export default function () {

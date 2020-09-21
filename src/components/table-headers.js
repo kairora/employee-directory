@@ -7,7 +7,7 @@ export default class TableHeaders extends Component {
         let headers = ["Image", "Name", "Phone", "Email", "DOB"];
 
         return headers.map(header => {
-            return <th scope="col" className="text-center">{header}</th>
+            return <th scope="col" key={header} className="text-center">{header}</th>
         });
     }
     render () {

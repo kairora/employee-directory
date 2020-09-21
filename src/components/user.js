@@ -1,4 +1,6 @@
 import React from "react";
+import dayjs from "dayjs"
+
 
 export default ({ user }) => (
     <>
@@ -7,7 +9,7 @@ export default ({ user }) => (
             <td className="align-middle">{user.name.first} {user.name.last}</td>
             <td className="align-middle">{user.cell}</td>
             <td className="align-middle">{user.email}</td>
-            <td className="align-middle">{user.dob.date}</td>
+            <td className="align-middle">{dayjs(user.dob.date).format("MM-DD-YYYY")}</td>
         </tr>
     </>
 )
