@@ -8,10 +8,10 @@ export default function (props) {
         <>
             <table className="table table-striped table-dark">
                 <thead>
-                    <tr><Headers /></tr>
+                    <tr><Headers  /></tr>
                 </thead>
                 <tbody>
-                    <Employee currentSearchValue= {props.currentSearchValue} />
+                    <Employee currentSearchValue= {props.currentSearchValue} currentSortState={props.currentSortState}/>
                 </tbody>
             </table>
         </>

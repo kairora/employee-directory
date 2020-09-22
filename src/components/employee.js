@@ -1,38 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import User from "./user"
-import search from './search';
-
 
 
 export default function (props) {
-    const [employees, setEmployees] = useState([])
-    
-    
-    useEffect(() => {
-      grabEmployees()
-    }, [search])
+  const [employees, setEmployees] = useState([]);
   
-    const grabEmployees = async () => { 
-      const res = await axios(`https://randomuser.me/api/?results=200&nat=us`)
-    //   console.log(res.data.results)
-      setEmployees(res.data.results)
-    }
+  useEffect(() => {
+    grabEmployees()
+  }, [])
+
+  const sortedEmps = 
+    employees
+      .filter(data => {
+          if (props.currentSearchValue == null) {
+              return data
+          }
+          else if (data.name.first.toLowerCase().includes(props.currentSearchValue.toLowerCase()) || data.name.last.toLowerCase().includes(props.currentSearchValue.toLowerCase())) {
+              return data
+          }
+      }).sort((a, b) => { 
+        if (props.currentSortState === "asc") {
+          if (a.name.first.toLowerCase() < b.name.first.toLowerCase()) return -1;
+          if (a.name.first.toLowerCase() > b.name.first.toLowerCase()) return 1;
+        } else {
+          if (a.name.first > b.name.first) return -1;
+          if (a.name.first < b.name.first)return 1;
+        }
+        return 0;
+ 
+  });
+
   
-    return (
-      <>
-        {employees
-            .filter(data => {
-                // console.log(data.name.first.toLowerCase())
-                if (props.currentSearchValue == undefined) {
-                    return data
-                }
-                else if (data.name.first.toLowerCase().includes(props.currentSearchValue.toLowerCase())) {
-                    // console.log(data)
-                    return data
-                }
-            })
-            .map(u => <User key={u.cell} user={u} />)}
-      </>
-    )
-  };
+  const grabEmployees = async () => { 
+    const res = await axios(`https://randomuser.me/api/?results=200&nat=us`)
+    setEmployees(res.data.results)
+  }
+
+  return (
+    <>
+      {sortedEmps
+          .map(u => <User key={u.cell} user={u} />)
+      }
+    </>
+  )
+};

@@ -5,13 +5,18 @@ import Search from "./components/search"
 
 
 function App() {
-  const [search, setSearch] = useState(null)
+  const [search, setSearch] = useState(null);
+  const [sorter, setSorter] = useState("asc");
 
     const searchToState = (event)=> {
         let searchTerm = event.target.value;
-        console.log(search)
         setSearch(searchTerm)
     }
+
+    const sortToState = (event)=> {
+      let sortVal = event.target.value;
+      setSorter(sortVal)
+  }
 
   return (
     <div className="App">
@@ -19,8 +24,8 @@ function App() {
         <h1><i className="fas fa-id-card"></i> Employee Directory</h1>
         <p>Click on carrots to filter by heading or use the search box to narrow your results.</p>
       </header>
-      <Search pillow="Search Employees" onSearchChanged = {searchToState} />
-      <Table currentSearchValue={search} />
+      <Search onSearchChanged={searchToState} onSortChanged={sortToState} />
+      <Table currentSearchValue= {search} currentSortState={sorter}/>
     </div>
   );
 }
