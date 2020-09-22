@@ -5,7 +5,7 @@
 ## Description 
 A react app to enable a user to search and sort through a robust employee directory. The user can search a name and sort names by alpabetical order.
 
-[View the Deployed App Here](https://stormy-sea-56122.herokuapp.com/)
+[View the Deployed App Here](https://kairora.github.io/employee-directory/)
 
 ![Employee Directory App Image](./public/assets/images/directory.PNG)
 
