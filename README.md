@@ -20,7 +20,8 @@ A react app to enable a user to search and sort through a robust employee direct
 ---
 
 ## Installation
-1. Install dependencies: react-router-dom, dayjs, bootstrap, axios, react-router, react-scripts, react using code ```npm install``` 2. Run code ```npm start``` to open the app in local
+1. Install dependencies: react-router-dom, dayjs, bootstrap, axios, react-router, react-scripts, react using code ```npm install``` 
+2. Run code ```npm start``` to open the app in local
 
 ## Usage
 Once dependencies are installed, the user is greeted with a simple UI including a list of employees, search input for name searching and buttons to sort the list of employees by ascending and descending name order.
@@ -39,10 +40,6 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 ## Contributing
 To make suggestions or contribute to this project, please email Brianna at the link below.
 
-## Tests
-~~~JS
-
-~~~
 ---
 
 ## Questions
